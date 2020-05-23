@@ -1,0 +1,11 @@
+---
+stages:
+  - environment
+  - quality gates
+
+default:
+  interruptible: true
+
+include:
+  - local: .gitlab/ci/environment.gitlab-ci.yml
+  - local: .gitlab/ci/quality-gates.gitlab-ci.yml

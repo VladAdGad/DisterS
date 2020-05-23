@@ -1,0 +1,17 @@
+.molecule_test: &molecule_test
+  stage: quality gates
+  image: ${CI_REGISTRY_IMAGE}
+  before_script:
+    - echo ${ANSIBLE_VAULT_PASSWORD} > ~/ansible_vault_password_file
+    - cd roles/configure_os
+  script:
+    - molecule --base-config=molecule/shared/base_molecule.yml --env-file=molecule/.env.yml test --scenario-name=${CI_JOB_NAME}
+
+debian:
+  <<: *molecule_test
+
+ubuntu:
+  <<: *molecule_test
+
+windows:
+  <<: *molecule_test

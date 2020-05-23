@@ -1,0 +1,5 @@
+---
+- name: Setup OS
+  hosts: all
+  roles:
+    - role: configure_os

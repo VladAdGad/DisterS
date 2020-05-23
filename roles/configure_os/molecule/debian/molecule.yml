@@ -1,0 +1,9 @@
+---
+platforms:
+  - name: debian
+    box: ${debian_vm_box}
+    box_version: ${debian_box_version}
+    memory: ${default_vm_memory}
+
+scenario:
+  name: debian

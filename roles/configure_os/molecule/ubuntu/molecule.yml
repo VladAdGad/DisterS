@@ -1,0 +1,9 @@
+---
+platforms:
+  - name: ubuntu
+    box: ${ubuntu_vm_box}
+    box_version: ${ubuntu_box_version}
+    memory: ${default_vm_memory}
+
+scenario:
+  name: ubuntu

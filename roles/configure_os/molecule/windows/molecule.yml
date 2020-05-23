@@ -1,0 +1,19 @@
+---
+platforms:
+  - name: windows
+    box: ${windows_vm_box}
+    box_version: ${windows_box_version}
+    memory: 4086
+    cpus: 4
+    instance_raw_config_args:
+      - vm.communicator = "winssh"
+
+provisioner:
+  inventory:
+    host_vars:
+      windows:
+        ansible_connection: ssh
+        ansible_shell_type: cmd
+
+scenario:
+  name: windows

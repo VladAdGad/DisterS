@@ -1,0 +1,8 @@
+### Ansible
+*.retry
+
+### JetBrains
+.idea
+
+### Vagrant
+.vagrant

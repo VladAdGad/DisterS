@@ -1,0 +1,11 @@
+---
+- name: Ensure ssh keys exists
+  copy:
+    src: "{{ item.src }}"
+    dest: "/home/{{ ansible_user_id }}/.ssh/"
+    owner: "{{ ansible_user_id }}"
+    group: "{{ ansible_user_id }}"
+    mode: "{{ item.mode }}"
+  loop:
+    - {src: id_rsa, mode: "0600"}
+    - {src: id_rsa.pub, mode: "0644"}

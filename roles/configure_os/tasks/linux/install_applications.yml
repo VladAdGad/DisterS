@@ -1,0 +1,51 @@
+---
+- name: Ensure that dependencies are updated
+  apt:
+    update_cache: true
+  changed_when: false
+
+- name: 1. Ensure applications are present
+  package:
+    name: "{{ item }}"
+  loop:
+    - ansible
+    - cmake
+    - ffmpeg
+    - git
+    - grub-customizer
+    - openjdk-11-jdk
+    - qbittorrent
+    - telegram-desktop
+    - terminator
+    - thunderbird
+    - vagrant
+    - vlc
+
+    - gnupg2
+    - snapd
+
+- name: 2. Ensure applications are present
+  snap:
+    name: "{{ item }}"
+    classic: true
+  loop:
+    - bitwarden
+    - clion
+    - discord
+    - foobar2000
+    - intellij-idea-community
+    - rider
+    - slack
+
+- block:
+    - name: 3. Ensure apt repository list is update
+      include_tasks: anydesk.yml
+
+    - name: 3.1. Ensure applications are present
+      package:
+        name: anydesk
+
+- name: Ensure that dependencies that are no longer required are absent
+  apt:
+    autoclean: true
+    autoremove: true
