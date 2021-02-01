@@ -2,4 +2,4 @@
 - name: Converge configure_os
   hosts: all
 
-- import_playbook: ../../../configure_os.yml
+- import_playbook: ../../../../configure_os.yml
