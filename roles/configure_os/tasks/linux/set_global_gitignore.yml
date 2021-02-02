@@ -1,0 +1,5 @@
+---
+- name: Ensure that global .gitignore exist
+  copy:
+    src: files/.gitignore
+    dest: ~/

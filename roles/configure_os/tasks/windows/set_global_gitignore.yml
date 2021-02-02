@@ -1,0 +1,5 @@
+---
+- name: Ensure that global .gitignore exist
+  win_copy:
+    src: files\.gitignore
+    dest: "%USERPROFILE%\
