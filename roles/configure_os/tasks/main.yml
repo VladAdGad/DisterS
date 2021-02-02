@@ -9,6 +9,7 @@
     - uninstall_applications
     - install_applications
     - ssh_keys
+    - set_global_gitignore
 
 - name: "Setup Windows"
   include_tasks: "windows/{{ item }}.yml"
@@ -17,3 +18,4 @@
     - uninstall_applications
     - install_applications
     - ssh_keys
+    - set_global_gitignore
