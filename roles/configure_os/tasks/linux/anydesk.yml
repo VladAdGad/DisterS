@@ -1,8 +1,10 @@
 ---
 - name: Ensure Anydesk public key is present
+  become: true
   apt_key:
     url: https://keys.anydesk.com/repos/DEB-GPG-KEY
 
 - name: Ensure Anydesk repository in a list
+  become: true
   apt_repository:
     repo: deb http://deb.anydesk.com/ all main

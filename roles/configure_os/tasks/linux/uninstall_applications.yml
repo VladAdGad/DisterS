@@ -1,8 +1,9 @@
 ---
 - name: Ensure preinstalled applications are absent
+  become: true
   package:
-    state: absent
     name: "{{ item }}"
+    state: absent
   loop:
     - aisleriot
     - cheese

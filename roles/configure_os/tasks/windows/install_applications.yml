@@ -10,7 +10,6 @@
     - anydesk
     - bitwarden
     - ccleaner
-    - chocolatey
     - chocolateygui
     - clion-ide
     - discord
@@ -37,3 +36,5 @@
     - uplay
     - vlc
     - windirstat
+  notify:
+    - Reboot the machine with all defaults

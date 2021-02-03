@@ -3,3 +3,19 @@
   win_copy:
     src: .gitignore
     dest: "%USERPROFILE%\\"
+
+- name: Ensure git is present
+  win_chocolatey:
+    name: git
+    ignore_checksums: true
+  retries: 3
+  delay: 10
+  notify:
+    - Reboot the machine with all defaults
+
+- name: Ensure that global core.excludesfile points to global .gitignore
+  win_shell: |
+    Import-Module "$env:ChocolateyInstall\helpers\chocolateyProfile.psm1";
+    Update-SessionEnvironment;
+    git config --global core.excludesFile "$Env:USERPROFILE\.gitignore"
+  changed_when: false
