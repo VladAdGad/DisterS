@@ -1,0 +1,6 @@
+---
+- name: Ensure that global .gitignore exist
+  copy:
+    src: .gitignore
+    dest: ./
+    mode: 0644
