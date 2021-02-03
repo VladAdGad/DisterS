@@ -1,4 +1,7 @@
 ---
+- debug:
+    msg: "{{ configs[0] }}"
+
 - name: "Setup Linux"
   include_tasks: "linux/{{ item }}.yml"
   args:
