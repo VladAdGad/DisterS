@@ -4,3 +4,15 @@
     src: .gitignore
     dest: ./
     mode: 0644
+
+- name: Ensure that git is present
+  become: true
+  package:
+    name: git
+
+- name: Ensure that global core.excludesfile points to global .gitignore
+  git_config:
+    scope: global
+    name: core.excludesFile
+    value: ~/.gitignore
+  changed_when: false

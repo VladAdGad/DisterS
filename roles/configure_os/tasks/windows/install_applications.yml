@@ -5,3 +5,5 @@
     ignore_checksums: true
   retries: 3
   delay: 10
+  notify:
+    - Reboot the machine with all defaults

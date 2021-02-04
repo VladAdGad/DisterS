@@ -1,14 +1,17 @@
 ---
 - name: Ensure that dependencies are updated
+  become: true
   apt:
     update_cache: true
   changed_when: false
 
 - name: 1. Ensure applications are present
+  become: true
   package:
     name: "{{ linux_packages.native }}"
 
 - name: 2. Ensure applications are present
+  become: true
   snap:
     name: "{{ linux_packages.snap }}"
     classic: true
@@ -18,10 +21,12 @@
       include_tasks: anydesk.yml
 
     - name: 3.1. Ensure applications are present
+      become: true
       package:
         name: "{{ linux_packages.ppa }}"
 
 - name: Ensure that dependencies that are no longer required are absent
+  become: true
   apt:
     autoclean: true
     autoremove: true

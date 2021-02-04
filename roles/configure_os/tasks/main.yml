@@ -1,9 +1,6 @@
 ---
 - name: "Setup Linux"
   include_tasks: "linux/{{ item }}.yml"
-  args:
-    apply:
-      become: true
   when: ansible_distribution | regex_search("Debian|Ubuntu")
   loop: "{{ configurations }}"
 
