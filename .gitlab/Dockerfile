@@ -5,8 +5,7 @@ RUN apt-get update &&\
     apt-get install --no-install-recommends --yes \
     gnupg2=2.2.19-3ubuntu2 \
     python3-pip=20.0.2-5ubuntu1.1 \
-    rsync=3.1.3-8 \
-    ssh=1:8.2p1-4ubuntu0.1 \
+    openssh-client=1:8.2p1-4ubuntu0.1 \
     wget=1.20.3-1ubuntu1
 
 RUN pip3 install \
