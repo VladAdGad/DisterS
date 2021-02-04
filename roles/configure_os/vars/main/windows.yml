@@ -4,7 +4,6 @@ windows_packages:
   - anydesk
   - bitwarden
   - ccleaner
-  - chocolatey
   - chocolateygui
   - clion-ide
   - discord
@@ -15,7 +14,6 @@ windows_packages:
   - git
   - google-backup-and-sync
   - intellijidea-community
-  #    - jetbrains-rider Bug on a side of Choco contributor
   - jetbrainstoolbox
   - notepadplusplus
   - openssh
@@ -36,7 +34,6 @@ windows_packages_to_uninstall:
   - microsoft.windowscommunicationsapps
   - Microsoft.BingWeather
   - Microsoft.Advertising.Xaml
-
   - Microsoft.GetHelp
   - Microsoft.Getstarted
   - Microsoft.MSPaint
