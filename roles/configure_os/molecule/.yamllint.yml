@@ -5,4 +5,3 @@ rules:
   line-length:
     max: 128
     level: warning
-  comments-indentation: disable

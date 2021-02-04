@@ -1,7 +1,7 @@
 ---
 - name: Ensure applications are present
   win_chocolatey:
-    name: "{{ windows_packages }}"
+    name: "{{ windows_applications }}"
     ignore_checksums: true
   retries: 3
   delay: 10

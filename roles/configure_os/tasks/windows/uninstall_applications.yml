@@ -1,5 +1,5 @@
 ---
 - name: Ensure preinstalled applications are absent
   win_shell: Get-AppxPackage "{{ item }}" | Remove-AppxPackage
-  loop: "{{ windows_packages_to_uninstall }}"
+  loop: "{{ windows_applications_to_uninstall }}"
   changed_when: false

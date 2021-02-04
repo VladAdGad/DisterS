@@ -1,5 +1,5 @@
 ---
-windows_packages:
+windows_applications:
   - 7zip
   - anydesk
   - bitwarden
@@ -24,13 +24,12 @@ windows_packages:
   - steam
   - telegram
   - thunderbird
-  - tor-browser
   - totalcommander
   - uplay
   - vlc
   - windirstat
 
-windows_packages_to_uninstall:
+windows_applications_to_uninstall:
   - microsoft.windowscommunicationsapps
   - Microsoft.BingWeather
   - Microsoft.Advertising.Xaml

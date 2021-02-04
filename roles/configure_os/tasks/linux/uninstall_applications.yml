@@ -2,5 +2,5 @@
 - name: Ensure preinstalled applications are absent
   become: true
   package:
-    name: "{{ linux_packages_to_uninstall }}"
+    name: "{{ linux_applications_to_uninstall }}"
     state: absent

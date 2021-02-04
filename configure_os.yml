@@ -7,5 +7,5 @@
         configurations:
           - uninstall_applications
           - install_applications
-          - ssh_keys
-          - set_global_gitignore
+          - configure_ssh_keys
+          - configure_global_gitignore
