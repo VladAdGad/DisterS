@@ -8,37 +8,13 @@
 - name: 1. Ensure applications are present
   become: true
   package:
-    name: "{{ item }}"
-  loop:
-    - ansible
-    - cmake
-    - ffmpeg
-    - git
-    - grub-customizer
-    - openjdk-11-jdk
-    - qbittorrent
-    - telegram-desktop
-    - terminator
-    - thunderbird
-    - vagrant
-    - vlc
-
-    - gnupg2
-    - snapd
+    name: "{{ linux_packages.native }}"
 
 - name: 2. Ensure applications are present
   become: true
   snap:
-    name: "{{ item }}"
+    name: "{{ linux_packages.snap }}"
     classic: true
-  loop:
-    - bitwarden
-    - clion
-    - discord
-    - foobar2000
-    - intellij-idea-community
-    - rider
-    - slack
 
 - block:
     - name: 3. Ensure apt repository list is update
@@ -47,7 +23,7 @@
     - name: 3.1. Ensure applications are present
       become: true
       package:
-        name: anydesk
+        name: "{{ linux_packages.ppa }}"
 
 - name: Ensure that dependencies that are no longer required are absent
   become: true

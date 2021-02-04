@@ -1,40 +1,9 @@
 ---
 - name: Ensure applications are present
   win_chocolatey:
-    name: "{{ item }}"
+    name: "{{ windows_packages }}"
     ignore_checksums: true
   retries: 3
   delay: 10
-  loop:
-    - 7zip
-    - anydesk
-    - bitwarden
-    - ccleaner
-    - chocolateygui
-    - clion-ide
-    - discord
-    - epicgameslauncher
-    - filezilla
-    - firefox
-    - foobar2000
-    - git
-    - google-backup-and-sync
-    - intellijidea-community
-#    - jetbrains-rider Bug on a side of Choco contributor
-    - jetbrainstoolbox
-    - notepadplusplus
-    - openssh
-    - origin
-    - qbittorrent
-    - rufus
-    - slack
-    - steam
-    - telegram
-    - thunderbird
-    - tor-browser
-    - totalcommander
-    - uplay
-    - vlc
-    - windirstat
   notify:
     - Reboot the machine with all defaults

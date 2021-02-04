@@ -2,17 +2,9 @@
 - name: "Setup Linux"
   include_tasks: "linux/{{ item }}.yml"
   when: ansible_distribution | regex_search("Debian|Ubuntu")
-  loop:
-    - uninstall_applications
-    - install_applications
-    - ssh_keys
-    - set_global_gitignore
+  loop: "{{ configurations }}"
 
 - name: "Setup Windows"
   include_tasks: "windows/{{ item }}.yml"
   when: ansible_distribution | regex_search("Windows")
-  loop:
-    - uninstall_applications
-    - install_applications
-    - ssh_keys
-    - set_global_gitignore
+  loop: "{{ configurations }}"
