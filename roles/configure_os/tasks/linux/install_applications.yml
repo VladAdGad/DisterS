@@ -8,12 +8,12 @@
 - name: 1. Ensure applications are present
   become: true
   package:
-    name: "{{ linux_packages.native }}"
+    name: "{{ linux_applications.native }}"
 
 - name: 2. Ensure applications are present
   become: true
   snap:
-    name: "{{ linux_packages.snap }}"
+    name: "{{ linux_applications.snap }}"
     classic: true
 
 - block:
@@ -23,7 +23,7 @@
     - name: 3.1. Ensure applications are present
       become: true
       package:
-        name: "{{ linux_packages.ppa }}"
+        name: "{{ linux_applications.ppa }}"
 
 - name: Ensure that dependencies that are no longer required are absent
   become: true

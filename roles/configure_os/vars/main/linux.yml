@@ -1,5 +1,5 @@
 ---
-linux_packages:
+linux_applications:
   native:
     - ansible
     - cmake
@@ -26,7 +26,7 @@ linux_packages:
   ppa:
     - anydesk
 
-linux_packages_to_uninstall:
+linux_applications_to_uninstall:
   - aisleriot
   - cheese
   - evolution
