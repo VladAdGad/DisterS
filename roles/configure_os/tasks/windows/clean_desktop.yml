@@ -1,0 +1,4 @@
+---
+- name: Ensure that all icons (*.lnk) are absent
+  win_shell: Get-ChildItem $env:Public\Desktop\*.lnk | ForEach-Object { Remove-Item $_ }
+  changed_when: false
