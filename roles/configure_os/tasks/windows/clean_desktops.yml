@@ -1,0 +1,14 @@
+---
+- name: Find all shorcuts in Desktop folders
+  win_find:
+    paths:
+      - "Desktop"
+      - "C:\\Users\\Public\\Desktop"
+    patterns: "*.lnk"
+  register: shortcuts
+
+- name: Ensure that all shortcuts are absent
+  win_file:
+    path: "{{ item.path }}"
+    state: absent
+  loop: "{{ shortcuts.files }}"

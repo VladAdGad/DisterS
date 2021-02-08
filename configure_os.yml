@@ -3,9 +3,3 @@
   hosts: all
   roles:
     - role: configure_os
-      vars:
-        configurations:
-          - uninstall_applications
-          - install_applications
-          - configure_ssh_keys
-          - configure_global_gitignore

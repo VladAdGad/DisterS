@@ -1,0 +1,5 @@
+---
+default_configurations:
+  - install_applications
+  - configure_ssh_keys
+  - configure_global_gitignore

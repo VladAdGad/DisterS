@@ -1,4 +1,7 @@
 ---
+linux_configurations:
+  - clean_gnome_third_party_applications
+
 linux_applications:
   native:
     - ansible
@@ -26,7 +29,7 @@ linux_applications:
   ppa:
     - anydesk
 
-linux_applications_to_uninstall:
+linux_gnome_third_party_applications:
   - aisleriot
   - cheese
   - evolution
