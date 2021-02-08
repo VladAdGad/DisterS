@@ -1,6 +1,6 @@
 ---
 windows_configurations:
-  - clean_desktop
+  - clean_desktops
   - uninstall_bloatware
 
 windows_applications:
