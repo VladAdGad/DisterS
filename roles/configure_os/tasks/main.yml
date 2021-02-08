@@ -7,4 +7,4 @@
 - name: "Setup Windows"
   include_tasks: "windows/{{ item }}.yml"
   when: ansible_distribution | regex_search("Windows")
-  loop: "{{ configurations + windows_configurations }}"
+  loop: "{{ default_configurations + windows_configurations }}"

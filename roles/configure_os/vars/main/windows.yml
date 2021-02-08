@@ -1,7 +1,7 @@
 ---
 windows_configurations:
-  - clean_desktop.yml
-  - uninstall_bloatware.yml
+  - clean_desktop
+  - uninstall_bloatware
 
 windows_applications:
   - 7zip
