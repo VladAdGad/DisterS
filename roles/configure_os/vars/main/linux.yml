@@ -26,7 +26,7 @@ linux_applications:
   ppa:
     - anydesk
 
-linux_applications_to_uninstall:
+linux_gnome_third_party_applications:
   - aisleriot
   - cheese
   - evolution

@@ -1,0 +1,6 @@
+---
+- name: Ensure preinstalled applications by Gnome are absent
+  become: true
+  package:
+    name: "{{ linux_gnome_third_party_applications }}"
+    state: absent
