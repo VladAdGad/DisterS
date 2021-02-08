@@ -1,4 +1,6 @@
 ---
 - name: Ensure that bloatware uninstalled
-  win_shell: iex ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/Sycnex/Windows10Debloater/master/Windows10SysPrepDebloater.ps1'))
+  vars:
+    win10_debloater_script: https://raw.githubusercontent.com/Sycnex/Windows10Debloater/master/Windows10SysPrepDebloater.ps1
+  win_shell: iex ((New-Object System.Net.WebClient).DownloadString("{{ win10_debloater_script }}"))
   changed_when: false
