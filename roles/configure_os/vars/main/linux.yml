@@ -1,4 +1,7 @@
 ---
+linux_configurations:
+  - clean_gnome_third_party_applications
+
 linux_applications:
   native:
     - ansible

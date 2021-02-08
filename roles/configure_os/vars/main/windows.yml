@@ -1,4 +1,8 @@
 ---
+windows_configurations:
+  - clean_desktop.yml
+  - uninstall_bloatware.yml
+
 windows_applications:
   - 7zip
   - anydesk

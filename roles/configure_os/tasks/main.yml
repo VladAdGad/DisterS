@@ -2,14 +2,9 @@
 - name: "Setup Linux"
   include_tasks: "linux/{{ item }}.yml"
   when: ansible_distribution | regex_search("Debian|Ubuntu")
-  loop:
-    - "{{ configurations }}"
-    - clean_gnome_third_party_applications
+  loop: "{{ default_configurations + linux_configurations }}"
 
 - name: "Setup Windows"
   include_tasks: "windows/{{ item }}.yml"
   when: ansible_distribution | regex_search("Windows")
-  loop:
-    - "{{ configurations }}"
-    - clean_desktop.yml
-    - uninstall_bloatware.yml
+  loop: "{{ configurations + windows_configurations }}"
